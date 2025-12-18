@@ -39,6 +39,7 @@ a {
 
 aside{
      padding: 2rem;
+     padding-right: 0;
     color: var(--clr-white);
     position: sticky;
     top: 0;
@@ -51,6 +52,48 @@ aside{
 .logo{
     font-weight: 400;
     font-size: 1.3rem;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.boton-menu{
+   background-color: transparent;
+   border: 0;
+   color: var(--clr-white);
+   font-size: 1rem;
+   cursor: pointer;
+   display: flex;
+   gap: 1rem;
+   font-weight: 600;
+   padding: 1rem;
+   font-size: .85rem;
+}
+
+.boton-menu.active{
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    position: relative;
+}
+
+.boton-menu.active::before{
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    right: 0;
+    background-color: red;
+}
+
+.boton-menu > i.bi-hand-index-thumb-fill,
+.boton-menu > i.bi-hand-index-thumb-fill {
+    transform: rotateZ(90deg);
 }
 
 .texto-footer{
@@ -83,4 +126,34 @@ main{
 
 .producto-detalles{
     background-color: var(--clr-main);
+    color: var(--clr-white);
+    padding: .5rem;
+    border-radius: 1rem;
+    margin-top: -2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
 }
+
+.producto-titulo{
+    font-size: 1rem;
+}
+
+.producto-agregar{
+    border: 0;
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    padding: .4rem;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    cursor: pointer;
+    border:2px solid var(--clr-white);
+    transition: background-color .2s, color .2s;
+}
+
+.producto-agregar:hover{
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+}
+
