@@ -72,12 +72,13 @@ aside{
    font-weight: 600;
    padding: 1rem;
    font-size: .85rem;
+   width: 100%;
+
 }
 
 .boton-menu.active{
     background-color: var(--clr-white);
     color: var(--clr-main);
-    width: 100%;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     position: relative;
@@ -122,6 +123,16 @@ aside{
     color: var(--clr-main);
     padding: .15rem .25rem;
     border-radius: .25rem;
+}
+
+.boton-carrito.active .numerito{
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+}
+
+.boton-carrito.active .numerito{
+    background-color: var(--clr-main);
+    color: var(--clr-white);
 }
 
 .texto-footer{
