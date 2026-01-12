@@ -10,3 +10,9 @@ Hice una recreacion del exterior de la taberna de Moe usando HTML y CSS ,además
 ## Ver ejemplo en vivo
 
 [https://viteripro.github.io/Web-ecommerce](https://viteripro.github.io/Web-ecommerce)/
+
+## Instalación
+Este proyecto no necesita de instalación. Simmplemente abre la carpeta o haz click en el .html
+
+## Contratación
+Si quieres contratarme puedes escribirme a gmail.com para consultas
