@@ -1,8 +1,6 @@
-const productosEnCarrito = JSON.parse(localStorage.getItem("productos-en-carrito"));
+let productosEnCarrito = JSON.parse(localStorage.getItem("productos-en-carrito"));
+console.log(JSON.parse(productosEnCarrito)); 
 
-
-// productosEnCarrito = JSON.parse(productosEnCarrito);
- 
 const contenedorCarritoVacio = document.querySelector("#carrito-vacio");
 const contenedorCarritoProductos = document.querySelector("#carrito-productos");
 const contenedorCarritoAcciones = document.querySelector("#carrito-acciones");
@@ -16,7 +14,6 @@ let botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar");
 function cargarProductosCarrito(){
   if(productosEnCarrito){
 
-//     productosEnCarrito = JSON.parse(productosEnCarrito);  
 
         contenedorCarritoVacio.classList.add("disabled");
         contenedorCarritoProductos.classList.remove("disabled");
@@ -74,14 +71,13 @@ function actualizarBotonesEliminar(){
  }
 
  function eliminarDelCarrito(e){
-    let idBoton = e.currentTarget.id;
-    console.log(idBoton)
-//     const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
-//     productosEnCarrito.splice(index, 1);
-//     cargarProductosCarrito();
+    const idBoton = e.currentTarget.id;
+    const index= productosEnCarrito.findIndex(producto => producto.id === idBoton);
 
-//     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
-//  }
+    productosEnCarrito.splice(index, 1);
+    cargarProductosCarrito();
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+ }
 
 // botonVaciar.addEventListener("click",vaciarCarrito);
 //  function vaciarCarrito() {
@@ -90,7 +86,7 @@ function actualizarBotonesEliminar(){
 //     localStorage.setItem("productos-en-carrito",JSON.stringify(productosEnCarrito));
 //     cargarProductosCarrito();
 
- }
+//  }
 
 // function actualizarTotal(){
 //   const totalCalculado = productosEnCarrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0);
