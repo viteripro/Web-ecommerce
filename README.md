@@ -1,5 +1,5 @@
 ## Descripción
-Hice una recreacion del exterior de la taberna de Moe usando HTML y CSS ,además, hice que se sea responsive para que se pueda visualizar en distintos dispositivos y le agrege un mensaje oculto cuando se este visualizando en dispositivos como una tablet o celular
+He realizado un sistema E-Commerce en el que se va a registrar productos que se van a comprar y luego se formara una lista de los productos elegidos asi como tambien iociones para eliminar el producto de la lista 
  
 ## Autor
 **Luis Viteri**
